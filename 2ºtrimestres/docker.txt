@@ -1,0 +1,11 @@
+COMO ENTRAR A DOCKER CON EL SIMBOLO DE SISTEMA
+
+docker exec -it mariadb-daw /bin/bash
+
+mariadb -u root -p
+password: mar
+
+create database prueba
+
+*añadir phpmyadmin*
+docker run -d --name phpmyadmin --link mariadb-daw:db -p 8080:80 phpmyadmin/phpmyadmin
